@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: http://localhost:3000/notes
+  method: GET
+  body:
+    type: json
+    content: "{\r
+
+      \    \"title\": \"My first note\",\r
+
+      \    \"content\": \"Hello from Postman!\",\r
+
+      \    \"userId\": 1\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    x-powered-by: Express
+    content-type: application/json; charset=utf-8
+    content-length: "2"
+    etag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
+    date: Mon, 21 Sep 2026 02:52:05 GMT
+    connection: keep-alive
+    keep-alive: timeout=5
+  body:
+    type: json
+    content: "[]"
+order: 1789959231658

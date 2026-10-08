@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: azure;
+}
+
+#root {
+    height: 100%;
+}
+
+.app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.notesBoard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.notesCont {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-content: flex-start;
+    background-color: aqua;
+    gap: 1em;
+}
+
+.note {
+    width: 10em;
+    height: 10em;
+    border-radius: 10px;
+    text-align: center;
+}
+.backdrop {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal {
+    width: 400px;
+    max-width: 90%;
+
+    padding: 2rem;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal input,
+.modal textarea {
+    width: 100%;
+    padding: 0.75rem;
+
+    font-size: 1rem;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+}
+
+.modal textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.modal button {
+    padding: 0.75rem;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #555;
+}
